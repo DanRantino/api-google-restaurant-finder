@@ -1,4 +1,5 @@
 import styled, { css } from 'styled-components';
+import Slider from 'react-slick';
 
 export const Conatiner = styled.div`
   ${(props) => css`
@@ -33,5 +34,13 @@ export const CarouselTitle = styled.h1`
     font-weight: bold;
     line-height: 29px;
     margin: 16px 0;
+  `}
+`;
+
+export const Carousel = styled(Slider)`
+  ${() => css`
+    .slick-slide {
+      margin-right: 16px;
+    }
   `}
 `;
