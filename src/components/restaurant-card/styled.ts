@@ -46,11 +46,16 @@ export const RestaurantAdress = styled.span`
   `}
 `;
 
-export const RestaurantPhoto = styled.img`
-  ${() => css`
+type load = {
+    isLoaded: boolean;
+}
+
+export const RestaurantPhoto = styled.img<load>`
+  ${({ isLoaded }) => css`
     width: 100px;
     height: 100px;
     object-fit: cover;
     border-radius: 6px;
+    display: ${isLoaded ? 'block' : 'none'};
   `}
 `;

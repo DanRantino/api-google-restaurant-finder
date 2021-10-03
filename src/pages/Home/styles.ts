@@ -1,7 +1,7 @@
 import styled, { css } from 'styled-components';
 import Slider from 'react-slick';
 
-export const Conatiner = styled.div`
+export const Container = styled.div`
   ${(props) => css`
     background-color: ${props.theme.colors.background};
     width: 360px;
@@ -9,7 +9,12 @@ export const Conatiner = styled.div`
     overflow-y: auto;
   `}
 `;
-
+export const Wrapper = styled.div`
+  ${() => css`
+    display: flex;
+    overflow: hidden;
+  `}
+`;
 export const Search = styled.section`
   ${() => css`
     display: flex;
@@ -42,5 +47,11 @@ export const Carousel = styled(Slider)`
     .slick-slide {
       margin-right: 16px;
     }
+  `}
+`;
+
+export const WrapperMap = styled.div`
+  ${() => css`
+    width: 70%;
   `}
 `;
